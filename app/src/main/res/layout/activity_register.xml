@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@drawable/login_bk"
+    android:focusableInTouchMode="true">
+
+
+    <LinearLayout
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/loginHeader"
+            android:text="Register"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputName"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNisRegis"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/newsMoreTextSize"
+                android:hint="NIS"
+                android:inputType="textPersonName"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPasswordRegis"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/newsMoreTextSize"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPasswordRegis1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/newsMoreTextSize"
+                android:hint="Konfirmasi Password"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/cirRegisterButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/primaryTextColor1"
+            android:layout_gravity="right"
+            android:text="Register"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            android:id="@+id/txt_login"
+            android:textColor="@color/primaryTextColor1"
+            android:text="Sudah Punya Akun ? Silahkan Login Disini"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

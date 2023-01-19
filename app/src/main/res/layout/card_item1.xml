@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gl="http://schemas.android.com/tools"
+    android:layout_margin="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Example with RelativeLayout and Gradient Drawable -->
+        <!-- for Recycler view use any of the layout as model-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mapel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            android:layout_marginTop="30dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="100dp"
+                android:background="@drawable/home_gradient_maths2"
+                gl:end_color="@color/gradientLightYellow2"
+                gl:start_color="@color/gradientLightOrange2"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textViewSub2Title"
+                    android:text="Mata Pelajaran"
+                    style="@style/viewParent.headerText.HomeCardTitle" />
+
+                <TextView
+                    android:id="@+id/hiyaa"
+                    android:text="Daftar Mata Pelajara Yang Diikuti"
+                    style="@style/viewParent.headerText.homeCardContent"
+                    android:layout_below="@id/textViewSub2Title"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:maxHeight="90dp"
+                    style="@style/homeCardImage" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
