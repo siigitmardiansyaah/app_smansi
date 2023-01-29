@@ -61,7 +61,7 @@ public class Register extends AppCompatActivity {
                     loginCall.enqueue(new Callback<ResponseData>() {
                         @Override
                         public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
-                            if(response.isSuccessful() && response.body().isError() == false){
+                            if(response.isSuccessful() && !response.body().isError()){
                                 //Ini untuk pindah
                                 Toast.makeText(Register.this, response.body().getMessage(), Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(Register.this, Login.class);

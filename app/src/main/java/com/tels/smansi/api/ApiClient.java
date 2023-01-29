@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static final String BASE_URL = "http://192.168.184.115/smansi/api/";
+    private static final String BASE_URL = "http://60.60.60.153/smansi_web/api/";
 
     private static Retrofit retrofit;
 

@@ -29,7 +29,8 @@
         <activity
             android:name=".Absensi"
             android:exported="true"
-            android:theme="@style/Theme.Material3.Light.NoActionBar">
+            android:theme="@style/ThemeOverlay.Material3.Light"
+            android:label="Rekap Absensi">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
