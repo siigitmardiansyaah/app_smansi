@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -74,15 +75,17 @@ public class AdapterMapel extends RecyclerView.Adapter<AdapterMapel.HolderData> 
 
     public class HolderData extends RecyclerView.ViewHolder {
         TextView mapel, kelas,id_mapel;
+        LinearLayout gas;
 
         public HolderData(@NonNull View itemView) {
             super(itemView);
             mapel = itemView.findViewById(R.id.textViewSub1Title);
             kelas = itemView.findViewById(R.id.list_mapel2);
+            gas = itemView.findViewById(R.id.btn_intent);
             id_mapel = itemView.findViewById(R.id.id_mapel);
 
 
-            mapel.setOnClickListener(new View.OnClickListener() {
+            gas.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
                     // TODO Auto-generated method stub

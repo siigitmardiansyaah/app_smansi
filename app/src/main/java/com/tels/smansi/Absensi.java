@@ -1,6 +1,7 @@
 package com.tels.smansi;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tels.smansi.adapter.AdapterAbsen;
@@ -45,12 +47,19 @@ public class Absensi extends AppCompatActivity {
         rvData = findViewById(R.id.rv_data);
         srlData = findViewById(R.id.srl_data);
         pbData = findViewById(R.id.pb_data);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
         sessionManager = new SessionManager(Absensi.this);
         if (!sessionManager.isLoggedIn()) {
             moveToLogin();
         }
+
+//        TextView toolbarText = (TextView) findViewById(R.id.toolbar_text);
+//        if(toolbarText!=null && toolbar!=null) {
+//            toolbarText.setText(getTitle());
+//            setSupportActionBar(toolbar);
+//        }
 
         srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
